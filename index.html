@@ -35,16 +35,15 @@
     }
     :root{
       --card-height:calc(clamp(501px, 100vh, 522px) - 2 * var(--card-padding));
-      --card-width:calc(clamp(0px, 100vw,  384px) - 2 * var(--card-padding));
+      --card-width:calc(clamp(0px, calc(100vw - 48px),  384px) - 2 * var(--card-padding));
       --card-drop-shadow:var(--color-Gray-950) 10px  10px 0;
       --card-strock:1px solid;
       --card-shadow: inset 0px 0px 0px 1px var(--color-Gray-950) ;
       --card-radius:20px;
       --card-padding:24px;
       --card-gap:24px;
-      
-      --illustration-raduis:10px;
 
+      --illustration-raduis:10px;
       --card-body-gap:calc(var(--card-gap) / 2);
 
       --category-raduis:4px;
@@ -62,6 +61,7 @@
       font-weight: var( --font-weight-normal);
       margin: 0;
       line-height: 150%;
+      transition: all .5s;
 
     }
 
@@ -79,15 +79,16 @@
       background: var(--color-White);
       height:var(--card-height) ;
       width: var(--card-width) ;
-      filter: drop-shadow(var(--card-drop-shadow));
       /* border: var(--card-strock); */
       box-shadow:  var(--card-shadow);
       border-radius: var(--card-radius);
       padding: var(--card-padding);
+      filter: drop-shadow(var(--card-drop-shadow));
       display: flex;
       flex-direction: column;
       gap: var(--card-gap);
     }
+    .card:hover{filter: drop-shadow(var(--card-drop-shadow));    }
     .card>img.illustration{
       border-radius: var(--illustration-raduis);
     }
