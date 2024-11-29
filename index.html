@@ -37,6 +37,7 @@
       --card-width:calc(clamp(0px, 100vw,  384px) - 2 * var(--card-padding));
       --card-drop-shadow:var(--color-Gray-950) 10px  10px 0;
       --card-strock:1px solid;
+      --card-shadow: inset 0px 0px 0px 1px var(--color-Gray-500) ;
       --card-radius:20px;
       --card-padding:24px;
       --card-gap:24px;
@@ -78,7 +79,8 @@
       height:var(--card-height) ;
       width: var(--card-width) ;
       filter: drop-shadow(var(--card-drop-shadow));
-      border: var(--card-strock);
+      /* border: var(--card-strock); */
+      box-shadow:  var(--card-shadow);
       border-radius: var(--card-radius);
       padding: var(--card-padding);
       display: flex;
