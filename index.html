@@ -31,13 +31,14 @@
       --font-head-one:24px;
       --font-weight-normal:400;
       --font-weight-extra:700;
+      --font-weight-extra-bold:800;
     }
     :root{
       --card-height:calc(clamp(501px, 100vh, 522px) - 2 * var(--card-padding));
       --card-width:calc(clamp(0px, 100vw,  384px) - 2 * var(--card-padding));
       --card-drop-shadow:var(--color-Gray-950) 10px  10px 0;
       --card-strock:1px solid;
-      --card-shadow: inset 0px 0px 0px 1px var(--color-Gray-500) ;
+      --card-shadow: inset 0px 0px 0px 1px var(--color-Gray-950) ;
       --card-radius:20px;
       --card-padding:24px;
       --card-gap:24px;
@@ -105,7 +106,7 @@
     }
     .card__head{
       font-size: var(--font-head-one);
-      font-weight: var(--font-weight-extra);
+      font-weight:var(--font-weight-extra-bold);
     }
     .card__head:hover{
       color: var(--color-Yellow);
