@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+    
+    .attribution { 
+      position: fixed;
+      bottom: 4%;
+       font-size: 11px; 
+       text-align: center; 
+       color:var(--color-Gray-500) 
+      }
+    .attribution a { color:var(--color-Gray-950) ;font-weight: var(--font-weight-extra); }
+   
+    :root{
+      --color-Yellow:#f4d04e;
+      --color-White:#ffffff;
+      --color-Gray-500:#6b6b6b;
+      --color-Gray-950:#121212;
+      --font-normal:14px;
+      --font-par:16px;
+      --font-head-one:24px;
+      --font-weight-normal:400;
+      --font-weight-extra:700;
+    }
+    :root{
+      --card-height:calc(clamp(501px, 100vh, 522px) - 2 * var(--card-padding));
+      --card-width:calc(clamp(0px, 100vw,  384px) - 2 * var(--card-padding));
+      --card-drop-shadow:var(--color-Gray-950) 10px  10px 0;
+      --card-strock:1px solid;
+      --card-radius:20px;
+      --card-padding:24px;
+      --card-gap:24px;
+      
+      --illustration-raduis:10px;
+
+      --card-body-gap:calc(var(--card-gap) / 2);
+
+      --category-raduis:4px;
+      --category-padding:4px 12px;
+      --category-weight:var(--font-weight-extra);
+      
+      --footer-gap:12px;
+
+      --avatar-size:32px;
+    }
+    *{
+      font-family: "Figtree";
+      color:black;
+      font-size: var( --font-normal);
+      margin: 0;
+    }
+    body{
+    background: var(--color-Yellow);
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+    .card{
+      background: var(--color-White);
+      height:var(--card-height) ;
+      width: var(--card-width) ;
+      filter: drop-shadow(var(--card-drop-shadow));
+      border: var(--card-strock);
+      border-radius: var(--card-radius);
+      padding: var(--card-padding);
+      display: flex;
+      flex-direction: column;
+      gap: var(--card-gap);
+    }
+    .card>img.illustration{
+      border-radius: var(--illustration-raduis);
+    }
+    .card>.card__body{
+      display: flex;
+      flex-direction: column;
+      gap: var(--card-body-gap);
+    }
+    .category{
+      background: var(--color-Yellow);
+      width: fit-content;
+      border-radius: var(--category-raduis);
+      padding: var(--category-padding);
+      font-weight:var(--font-weight-extra);
+    }
+    .card__head{
+      font-size: var(--font-head-one);
+      font-weight: var(--font-weight-extra);
+    }
+    .card__head:hover{
+      color: var(--color-Yellow);
+      cursor: pointer;
+    }
+    .card__para{
+      font-size: var(--font-par);
+      color: var(--color-Gray-500);
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    .card__footer{
+      display: flex;
+      align-items: center;
+      gap: var(--footer-gap);
+      font-weight: var(--font-weight-extra);
+    }
+    .avatar{
+      border-radius: 50%;
+      width: var(--avatar-size);
+      aspect-ratio: 1/1;
+      background: var(--color-Yellow);
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+    <img class="illustration" src="./assets/images/illustration-article.svg" alt="">
+    <div class="card__body">
+      <span class="category">Learning</span>
+      <span class="published__date">Published 21 Dec 2023</span>
+      <h2 class="card__head">HTML & CSS foundations</h2>
+      <p class="card__para">These languages are the backbone of every website, defining structure, content, and presentation. </p>
+    </div>
+    <div class="card__footer">
+    <img class="avatar" src="./assets/images/image-avatar.webp" alt="">
+    <!-- <img class="avatar" src="./assets/images/illustration-article.svg" alt=""> -->
+     <span>Greg Hooper</span> 
+    </div>
+</div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://habbasmounir.netlify.app/" target="_blank">habbas mounir</a>.
+  </div>
+</body>
+</html>
